@@ -1,0 +1,534 @@
+
+/* =====================================
+   JESS-MEDIA PORTFOLIO PAGE
+   ===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #dddddd;
+    color: white;
+}
+
+.website {
+    width: 100%;
+    max-width: 1180px;
+    min-height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+
+    background: radial-gradient(
+        ellipse at center,
+        #858681 0%,
+        #454642 40%,
+        #171817 75%,
+        #050606 100%
+    );
+}
+
+/* HEADER */
+
+.header {
+    margin: 0 25px;
+    padding: 18px 10px 8px;
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        #050505,
+        #252624,
+        #666761
+    );
+}
+
+.header h1 {
+    color: #fff000;
+    font-size: 42px;
+    font-weight: normal;
+}
+
+/* NAVIGATION BAR */
+
+.navigation {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    min-height: 48px;
+    margin: 80px 35px 0;
+
+    background: linear-gradient(
+        to bottom,
+        #a7a8a3,
+        #656660 50%,
+        #20211f
+    );
+
+    border: 1px solid #555650;
+    border-radius: 0 0 10px 10px;
+}
+
+/* JM LOGO */
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 170px;
+    height: 170px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background: linear-gradient(
+        135deg,
+        #888888,
+        #333333 60%,
+        #000000
+    );
+
+    border: 16px solid #ed2475;
+    border-radius: 50%;
+}
+
+.logo-j,
+.logo-m {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1;
+    text-shadow: 3px 3px 4px #000000;
+}
+
+.logo-j {
+    color: white;
+    margin-right: -17px;
+}
+
+.logo-m {
+    color: #fff000;
+}
+
+/* NAVIGATION LINKS */
+
+.nav-links {
+    display: flex;
+    flex: 1;
+    margin-left: 190px;
+}
+
+.nav-links a {
+    flex: 1;
+    padding: 13px 5px;
+
+    color: #ed2475;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+
+    border-right: 1px solid #555555;
+    transition: 0.3s;
+}
+
+.nav-links a:last-child {
+    border-right: none;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff000;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* MAIN PORTFOLIO AREA */
+
+.portfolio-content {
+    padding: 35px 32px;
+}
+
+.page-label {
+    margin-bottom: 12px;
+
+    color: #ed2475;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.portfolio-heading {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.portfolio-heading h2 {
+    margin-bottom: 15px;
+    color: white;
+    font-size: 36px;
+}
+
+.portfolio-heading p {
+    color: #eeeeee;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* PROJECT GRID */
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* PROJECT CARDS */
+
+.project-card {
+    overflow: hidden;
+
+    background: #f5f5f5;
+    color: #222222;
+
+    border: 1px solid #777777;
+    border-radius: 5px;
+
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+/* PROJECT IMAGES */
+
+.project-card img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+
+    background: linear-gradient(
+        135deg,
+        #444444,
+        #888888
+    );
+
+    border-bottom: 4px solid #ed2475;
+}
+
+/* PROJECT DESCRIPTION */
+
+.project-info {
+    padding: 18px;
+}
+
+.project-info h3 {
+    margin-bottom: 12px;
+
+    color: #222222;
+    font-size: 21px;
+}
+
+.project-info p {
+    margin-bottom: 18px;
+
+    color: #444444;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.project-type {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    color: #111111;
+    background: #fff000;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    border-radius: 3px;
+}
+
+/* CONTACT / CALL TO ACTION */
+
+.portfolio-cta {
+    margin-top: 40px;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: linear-gradient(
+        to right,
+        #080808,
+        #363733,
+        #080808
+    );
+
+    border-top: 3px solid #ed2475;
+}
+
+.portfolio-cta h2 {
+    margin-bottom: 12px;
+
+    color: #fff000;
+    font-size: 28px;
+}
+
+.portfolio-cta p {
+    margin-bottom: 22px;
+
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.contact-button {
+    display: inline-block;
+
+    padding: 12px 30px;
+
+    color: #111111;
+    background: #fff000;
+
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.contact-button:hover {
+    color: white;
+    background: #ed2475;
+}
+
+/* FOOTER */
+
+.footer {
+    display: grid;
+    grid-template-columns: 1.2fr 0.7fr 1.2fr;
+    gap: 20px;
+
+    padding: 15px 18px 0;
+
+    color: #222222;
+    background: #ffffff;
+    border: 2px solid #222222;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo {
+    font-size: 42px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: -7px;
+}
+
+.footer-name {
+    font-size: 15px;
+}
+
+.footer-social p,
+.footer-contact p {
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.footer-social a {
+    display: block;
+    width: fit-content;
+    margin-bottom: 7px;
+
+    color: #333333;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.footer-social a:hover {
+    color: #ed2475;
+}
+
+.copyright {
+    grid-column: 1 / -1;
+
+    padding: 12px 0;
+    border-top: 1px solid #cccccc;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+/* TABLET RESPONSIVENESS */
+
+@media screen and (max-width: 850px) {
+
+    .header h1 {
+        font-size: 34px;
+    }
+
+    .navigation {
+        margin: 110px 20px 0;
+    }
+
+    .logo {
+        left: 5px;
+        width: 125px;
+        height: 125px;
+        border-width: 12px;
+    }
+
+    .logo-j,
+    .logo-m {
+        font-size: 60px;
+    }
+
+    .logo-j {
+        margin-right: -13px;
+    }
+
+    .nav-links {
+        margin-left: 130px;
+    }
+
+    .nav-links a {
+        padding: 12px 3px;
+        font-size: 12px;
+    }
+
+    .portfolio-content {
+        padding: 30px 22px;
+    }
+
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+
+    .project-card img {
+        height: 170px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media screen and (max-width: 560px) {
+
+    .header {
+        margin: 0 10px;
+    }
+
+    .header h1 {
+        font-size: 26px;
+    }
+
+    .navigation {
+        margin: 85px 10px 0;
+        padding: 8px 4px;
+    }
+
+    .logo {
+        left: 3px;
+        width: 85px;
+        height: 85px;
+        border-width: 8px;
+    }
+
+    .logo-j,
+    .logo-m {
+        font-size: 40px;
+    }
+
+    .logo-j {
+        margin-right: -9px;
+    }
+
+    .nav-links {
+        margin-left: 83px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        flex: 1 1 30%;
+        padding: 7px 2px;
+        font-size: 11px;
+    }
+
+    .portfolio-content {
+        padding: 25px 15px;
+    }
+
+    .page-label {
+        font-size: 19px;
+    }
+
+    .portfolio-heading h2 {
+        font-size: 28px;
+    }
+
+    .portfolio-heading p {
+        font-size: 14px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .project-card img {
+        height: 210px;
+    }
+
+    .portfolio-cta {
+        padding: 25px 12px;
+    }
+
+    .portfolio-cta h2 {
+        font-size: 23px;
+    }
+
+    .footer {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 15px 10px 0;
+    }
+
+    .footer-contact {
+        grid-column: auto;
+    }
+
+    .copyright {
+        grid-column: auto;
+        line-height: 1.5;
+    }
+}
